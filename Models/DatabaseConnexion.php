@@ -2,10 +2,10 @@
 
 class DatabaseConnexion {
 
-    private $host;
-    private $db_name;
-    private $user;
-    private $password;
+    protected $host;
+    protected $db_name;
+    protected $user;
+    protected $password;
 
     public function __construct(){
 
@@ -18,7 +18,7 @@ class DatabaseConnexion {
      */
     public function getConfig(){
 
-        $db = require('dbconfig.php');
+        $db = require(__DIR__ . '/../dbconfig.php');
 
         foreach ($db as $key => $value){
             
